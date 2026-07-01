@@ -1,0 +1,34 @@
+name: vpnapp
+description: "App de VPN multiplataforma (Android, iOS, Desktop)"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Backend / autenticação / dados
+  supabase_flutter: ^2.5.0
+
+  # Gerenciamento de estado
+  flutter_riverpod: ^2.5.1
+
+  # Utilidades
+  flutter_dotenv: ^5.1.0      # para guardar chaves (Supabase URL/key, API do provedor VPN)
+  fl_country_code_picker: ^3.0.1  # útil pra lista de países/servidores
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/images/
+
